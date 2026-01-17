@@ -9,6 +9,7 @@ import {
 
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
+import Post from '../app/components/post'
 
 export default function Index() {
   return (
@@ -59,11 +60,13 @@ export default function Index() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView
+      <ScrollView style={{marginTop: 20}}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       >
-        <Text>Okay welcome my name is Oreofe-Olanrewaju Christopher</Text>
+
+        <Post/>
+        {/* <Text>Okay welcome my name is Oreofe-Olanrewaju Christopher</Text> */}
       </ScrollView>
 
       <View></View>
