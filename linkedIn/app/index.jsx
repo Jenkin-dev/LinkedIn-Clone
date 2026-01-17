@@ -6,7 +6,9 @@ export default function Index() {
     <SafeAreaView>
       <View></View>
 
-      <ScrollView></ScrollView>
+      <ScrollView>
+        {/* <Text>Okay welcome my name is Oreofe-Olanrewaju Christopher</Text> */}
+      </ScrollView>
 
       <View></View>
     </SafeAreaView>
