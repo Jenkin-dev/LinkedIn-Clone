@@ -1,4 +1,11 @@
-import { Text, View, ScrollView, Image, TextInput } from "react-native";
+import {
+  Text,
+  View,
+  ScrollView,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -14,7 +21,8 @@ export default function Index() {
           gap: 20,
           // backgroundColor: "pink",
           alignItems: "center",
-          justifyContent: 'center', position: "relative"
+          justifyContent: "center",
+          position: "relative",
         }}
       >
         <Image
@@ -22,7 +30,11 @@ export default function Index() {
           source={require("../assets/images/WhatsApp Image 2.jpeg")}
         />
 
-        <Ionicons name="search" size={20} style={{position: 'absolute', left: 60,}}/>
+        <Ionicons
+          name="search"
+          size={20}
+          style={{ position: "absolute", left: 60 }}
+        />
         <TextInput
           style={{
             borderColor: "grey",
@@ -36,9 +48,15 @@ export default function Index() {
           }}
           placeholder="Search"
           placeholderTextColor={"grey"}
-        />
-
-        <Ionicons name="chatbubble-ellipses" size={25} color={'grey'} style={{transform: [{scaleX: 1.3}]}}/>
+        />  
+        <TouchableOpacity>
+          <Ionicons
+            name="chatbubble-ellipses"
+            size={25}
+            color={"grey"}
+            style={{ transform: [{ scaleX: 1.3 }] }}
+          />
+        </TouchableOpacity>
       </View>
 
       <ScrollView
