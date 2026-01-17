@@ -1,7 +1,7 @@
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 // import { Entypo } from "@expo/vector-icons";
-const Post = () => {
+const PostHead = () => {
   return (
     //The view below is to be in a flex row containig (Profie Pic), (Profile details) , (follow button)
 
@@ -39,10 +39,10 @@ const Post = () => {
         {/* <Ionicons name="ellipsis-vertical"/> */}
       </TouchableOpacity>
       <TouchableOpacity>
-      <Entypo name="dots-three-vertical" size={15} />
+        <Entypo name="dots-three-vertical" size={15} />
       </TouchableOpacity>
     </View>
   );
 };
 
-export default Post;
+export default PostHead;

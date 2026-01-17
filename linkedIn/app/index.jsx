@@ -9,7 +9,7 @@ import {
 
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
-import Post from '../app/components/post'
+import PostHead from "./components/posthead";
 
 export default function Index() {
   return (
@@ -49,7 +49,7 @@ export default function Index() {
           }}
           placeholder="Search"
           placeholderTextColor={"grey"}
-        />  
+        />
         <TouchableOpacity>
           <Ionicons
             name="chatbubble-ellipses"
@@ -60,13 +60,12 @@ export default function Index() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView style={{marginTop: 20}}
+      <ScrollView
+        style={{ marginTop: 20 }}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       >
-
-        <Post/>
-        {/* <Text>Okay welcome my name is Oreofe-Olanrewaju Christopher</Text> */}
+        <PostHead/>
       </ScrollView>
 
       <View></View>
