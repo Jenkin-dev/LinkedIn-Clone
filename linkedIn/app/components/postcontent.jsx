@@ -19,12 +19,15 @@ const Postcontent = () => {
           accusantium labore perferendis aspernatur? Culpa labore soluta nostrum
           nulla eligendi distinctio velit corrupti, praesentium tempore omnis
           assumenda architecto saepe aut.!
-          <TouchableOpacity>
-            {!readMore && (
-              <Text onPress={() => setReadMore(true)} style={{ color: "grey", fontWeight: 650 }}> ...more</Text>
-            )}
-          </TouchableOpacity>
-        </Text>
+        </Text>{" "}
+        {!readMore && (
+          <Text
+            onPress={() => setReadMore(true)}
+            style={{ color: "grey", fontWeight: 650 }}
+          >
+            ...more
+          </Text>
+        )}
       </View>
     </View>
   );
