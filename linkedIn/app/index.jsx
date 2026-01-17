@@ -44,7 +44,7 @@ export default function Index() {
             flex: 1,
             maxWidth: 700,
             height: 35,
-            borderRadius: 15,
+            borderRadius: 17,
             paddingHorizontal: 30,
           }}
           placeholder="Search"
