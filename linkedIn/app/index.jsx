@@ -16,7 +16,7 @@ import BottomTab from "./components/bottomtab";
 export default function Index() {
   return (
     <SafeAreaView
-      style={{ backgroundColor: "whitesmoke", flex: 1, padding: 20 }}
+      style={{ backgroundColor: "whitesmoke", flex: 1, padding: 20, paddingBottom: 10 }}
     >
       <View
         style={{

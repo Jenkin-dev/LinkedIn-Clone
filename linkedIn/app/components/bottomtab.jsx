@@ -1,8 +1,10 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 
 const BottomTab = () => {
   return (
-    <View></View>)}
+    <View>
+    <Text>dfhjdhfjdf</Text>
+    </View>)}
 
 export default BottomTab;

@@ -14,7 +14,7 @@ const Postcontent = () => {
           consectetur adipisicing elit. Suscipit eaque possimus est consequuntur
           ad, magni perspiciatis iusto enim consequatur sapiente!  
           <TouchableOpacity>
-            <Text style={{ color: "grey", fontWeight: 900}}>  ...more</Text>
+            <Text style={{ color: "grey", fontWeight: 650}}>  ...more</Text>
           </TouchableOpacity>
         </Text>
       </View>
