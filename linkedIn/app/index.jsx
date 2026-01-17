@@ -11,6 +11,7 @@ import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
 // import PostHead from "./components/posthead";
 import Postcontent from "./components/postcontent";
+import BottomTab from "./components/bottomtab";
 
 export default function Index() {
   return (
@@ -70,7 +71,7 @@ export default function Index() {
         <Postcontent />
       </ScrollView>
 
-      <View></View>
+      <BottomTab/>
     </SafeAreaView>
   );
 }
