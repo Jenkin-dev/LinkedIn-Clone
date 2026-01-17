@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import PostHead from "./posthead";
 
 const Post = () => {
@@ -6,10 +6,13 @@ const Post = () => {
     <View>
       <PostHead />
 
-      <View>
+      <View 
+    //   style={{ flexDirection: "row"}}
+      >
         <Text>
             This is the content of the post. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque possimus est consequuntur ad, magni perspiciatis iusto enim consequatur sapiente!
         </Text>
+        <TouchableOpacity><Text>...more</Text></TouchableOpacity>
       </View>
 
     </View>
