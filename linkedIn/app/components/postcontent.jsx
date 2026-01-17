@@ -6,15 +6,18 @@ const Postcontent = () => {
     <View>
       <PostHead />
 
-      <View 
-    //   style={{ flexDirection: "row"}}
+      <View
+      //   style={{ flexDirection: "row"}}
       >
         <Text>
-            This is the content of the post. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque possimus est consequuntur ad, magni perspiciatis iusto enim consequatur sapiente!
+          This is the content of the post. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Suscipit eaque possimus est consequuntur
+          ad, magni perspiciatis iusto enim consequatur sapiente!  
+          <TouchableOpacity>
+            <Text style={{ color: "grey", fontWeight: 900}}>  ...more</Text>
+          </TouchableOpacity>
         </Text>
-        <TouchableOpacity><Text style={{color: 'grey'}}>...more</Text></TouchableOpacity>
       </View>
-
     </View>
   );
 };

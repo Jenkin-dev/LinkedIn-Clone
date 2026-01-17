@@ -10,7 +10,7 @@ const PostHead = () => {
         flexDirection: "row",
         alignItems: "center",
         gap: 10,
-        backgroundColor: "lightgreen",
+        // backgroundColor: "white",
         marginVertical: 10,
         // justifyContent: "flex-end"
       }}
