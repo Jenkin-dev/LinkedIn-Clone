@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import PostHead from "./posthead";
 
-const Post = () => {
+const Postcontent = () => {
   return (
     <View>
       <PostHead />
@@ -19,4 +19,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default Postcontent;

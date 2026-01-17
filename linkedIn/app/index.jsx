@@ -10,7 +10,7 @@ import {
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
 // import PostHead from "./components/posthead";
-import Post from "./components/post";
+import Postcontent from "./components/postcontent";
 
 export default function Index() {
   return (
@@ -67,7 +67,7 @@ export default function Index() {
         showsHorizontalScrollIndicator={false}
       >
         {/* <PostHead/> */}
-        <Post />
+        <Postcontent />
       </ScrollView>
 
       <View></View>
