@@ -8,8 +8,7 @@ const Post = () => {
 
       <View>
         <Text>
-          This is where the post content will go. We are building this step by
-          step!
+            This is the content of the post. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque possimus est consequuntur ad, magni perspiciatis iusto enim consequatur sapiente!
         </Text>
       </View>
 
