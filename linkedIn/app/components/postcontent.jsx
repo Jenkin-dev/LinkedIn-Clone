@@ -9,7 +9,10 @@ const Postcontent = () => {
       <PostHead />
 
       <View>
-        <Text>
+        <Text
+          //if readMore is true, show full text else show just two lines of the text
+          numberOfLines={readMore ? null : 2}
+        >
           This is the content of the post. Lorem ipsum dolor, sit amet
           consectetur adipisicing elit. Temporibus atque velit inventore! Et
           voluptatem doloremque suscipit minus assumenda temporibus consequuntur
@@ -17,7 +20,9 @@ const Postcontent = () => {
           nulla eligendi distinctio velit corrupti, praesentium tempore omnis
           assumenda architecto saepe aut.!
           <TouchableOpacity>
-            <Text style={{ color: "grey", fontWeight: 650 }}> ...more</Text>
+            {!readMore && (
+              <Text onPress={() => setReadMore(true)} style={{ color: "grey", fontWeight: 650 }}> ...more</Text>
+            )}
           </TouchableOpacity>
         </Text>
       </View>
@@ -26,5 +31,3 @@ const Postcontent = () => {
 };
 
 export default Postcontent;
-
-
