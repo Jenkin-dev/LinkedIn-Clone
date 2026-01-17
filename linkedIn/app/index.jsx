@@ -1,19 +1,50 @@
-import { Text, View, ScrollView, Image } from "react-native";
+import { Text, View, ScrollView, Image, TextInput } from "react-native";
+
+import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
     <SafeAreaView
-      style={{ backgroundColor: "lightyellow", flex: 1, padding: 20 }}
+      style={{ backgroundColor: "whitesmoke", flex: 1, padding: 20 }}
     >
+      <View
+        style={{
+          flexDirection: "row",
+          gap: 20,
+          // backgroundColor: "pink",
+          alignItems: "center",
+          justifyContent: 'center', position: "relative"
+        }}
+      >
+        <Image
+          style={{ width: 35, height: 35, borderRadius: 25 }}
+          source={require("../assets/images/WhatsApp Image 2.jpeg")}
+        />
+
+        <Ionicons name="search" size={20} style={{position: 'absolute', left: 60,}}/>
+        <TextInput
+          style={{
+            borderColor: "grey",
+            borderWidth: 1,
+            // width: 350,
+            flex: 1,
+            maxWidth: 700,
+            height: 35,
+            borderRadius: 15,
+            paddingHorizontal: 30,
+          }}
+          placeholder="Search"
+          placeholderTextColor={"grey"}
+        />
+
+        <Ionicons name="chatbubble-ellipses" size={25} color={'grey'} style={{transform: [{scaleX: 1.3}]}}/>
+      </View>
+
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       >
-        <View style={{ flexDirection: "row" }}>
-          <Image style={{width: 30, height: 30}}source={require("../assets/images/WhatsApp Image 2.jpeg")} />
-        </View>
-
         <Text>Okay welcome my name is Oreofe-Olanrewaju Christopher</Text>
       </ScrollView>
 
