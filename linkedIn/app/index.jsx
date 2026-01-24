@@ -5,29 +5,43 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  StyleSheet,
 } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
-// import PostHead from "./components/posthead";
+import PostHead from "./components/posthead";
 import Postcontent from "./components/postcontent";
 import BottomTab from "./components/bottomtab";
+import Noimagepost from "./components/noimagepost"
+
+const styles = StyleSheet.create({
+  homepage: {
+    backgroundColor: "offwhite",
+    flex: 1,
+    padding: 20,
+  },
+  post: {
+    marginVertical: 5,
+    backgroundColor: "white",
+    padding: 10,
+  },
+
+  topbar: {
+    flexDirection: "row",
+    gap: 20,
+    // backgroundColor: "pink",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "relative",
+    marginBottom: 10,
+  },
+});
 
 export default function Index() {
   return (
-    <SafeAreaView
-      style={{ backgroundColor: "whitesmoke", flex: 1, padding: 20, paddingBottom: 10 }}
-    >
-      <View
-        style={{
-          flexDirection: "row",
-          gap: 20,
-          // backgroundColor: "pink",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-        }}
-      >
+    <SafeAreaView style={styles.homepage}>
+      <View style={styles.topbar}>
         <Image
           style={{ width: 35, height: 35, borderRadius: 25 }}
           source={require("../assets/images/WhatsApp Image 2.jpeg")}
@@ -61,17 +75,112 @@ export default function Index() {
           />
         </TouchableOpacity>
       </View>
-
       <ScrollView
-        style={{ marginTop: 20 }}
+        // style={{ marginTop: 20 }}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       >
-        {/* <PostHead/> */}
-        <Postcontent />
-      </ScrollView>
+        <View style={styles.post}>
+          <PostHead
+            Username={"C_Jenkins"}
+            Details={"Mobile developer in the making"}
+            days={"6d"}
+            Profilepicture={require("../assets/images/WhatsApp Image 2.jpeg")}
+          />
+          <Postcontent
+            content={
+              "This is a demo content where i am using props in a reusable component. I am meant to make it at least more than two lines long in order for the read more button to function properly since I set the number of lines for readmore not true to be 2 lines. Well that' by the way. In this project ,I successfuly used reusable components to Insert the post head and the information that is within the contents of this post "
+            }
+            contentpost={require("../assets/images/Screenshot (28).png")}
+          />
+        </View>
+        <View style={styles.post}>
+          <PostHead
+            Username={"Chris Jenkins"}
+            Profilepicture={require("../assets/images/WhatsApp Image 2025-12-23 at 11.28.55 AM.jpeg")}
+            Details={"Computer Sci. Student"}
+            days={"9d"}
+          />
+          <Postcontent
+            content={
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error"
+            }
+            contentpost={require("../assets/images/Screenshot (2).png")}
+          />
+        </View>
 
-      <BottomTab/>
+        <View style={styles.post}>
+          <PostHead
+            Profilepicture={require("../assets/images/IMG-20251118-WA0021.jpg")}
+            Username={"Unknown User"}
+            Details={"Anonymous is power"}
+            days={"5d"}
+          />
+          <Postcontent
+            content={
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error "
+            }
+            contentpost={require("../assets/images/Capture001.png")}
+          />
+        </View>
+        <View style={styles.post}>
+          <PostHead
+            Profilepicture={require("../assets/images/WhatsApp Image 2025-12-23 at 11.28.55 AM.jpeg")}
+            Username={"Christopher O.O"}
+            Details={"Mobile Development student at TechCrush"}
+            days={"2w"}
+          />
+          <Noimagepost
+            content={
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, dolorem provident quaerat a ratione expedita molestias rem magni. Consectetur aperiam, doloribus sit non ipsam minima inventore pariatur commodi at quidem voluptas quisquam quaerat. Deleniti perferendis ducimus adipisci sequi quos minus, dolores maiores labore culpa numquam sit temporibus sapiente nobis praesentium ipsam incidunt iste earum nulla aspernatur veritatis vitae consequuntur autem animi? Incidunt quisquam labore blanditiis hic recusandae voluptatum laborum laboriosam. Quia esse laborum illo nulla! Qui mollitia voluptatibus vitae quidem quaerat deleniti quia repellat maiores at sit officiis aliquid voluptatum numquam, id asperiores modi corrupti doloremque architecto nihil aut quasi sed iure? Officiis adipisci porro, qui temporibus molestiae labore molestias exercitationem officia ratione consequuntur totam odio fugiat dolore nemo quos cupiditate expedita culpa doloremque. Atque sed aut officia praesentium magni qui nisi, iure rerum quas necessitatibus, maiores omnis facere dolores accusamus minima doloribus dolorem, repellat hic pariatur quam aliquid asperiores soluta! Dolores nisi fugit illo eligendi tempore dicta, sed, perferendis natus ducimus libero mollitia quisquam alias in expedita dolor eaque, repellat nobis culpa! Atque possimus vel ipsam, explicabo eius nesciunt laborum omnis, perspiciatis perferendis quidem repellendus tenetur tempora vero, facilis architecto autem? Ipsum in dolorum dolores magnam error rerum nostrum."
+            }
+          />
+        </View>
+
+        <View style={styles.post}>
+          <PostHead
+            Profilepicture={require("../assets/images/WhatsApp Image 2.jpeg")}
+            Username={"Gbengachris87"}
+            Details={"Studying at the University of Ilorin"}
+            days={"2y"}
+          />
+          <Noimagepost
+            content={
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, dolorem provident quaerat a ratione expedita molestias rem magni. Consectetur aperiam, doloribus sit non ipsam minima inventore pariatur commodi at quidem voluptas quisquam quaerat. Deleniti perferendis ducimus adipisci sequi quos minus, dolores maiores labore culpa numquam sit temporibus sapiente nobis praesentium ipsam incidunt iste earum nulla aspernatur veritatis vitae consequuntur autem animi? Incidunt quisquam labore blanditiis hic recusandae voluptatum laborum laboriosam. Quia esse laborum illo nulla! Qui mollitia voluptatibus vitae quidem quaerat deleniti quia repellat maiores at sit officiis aliquid voluptatum numquam, id asperiores modi corrupti doloremque architecto nihil aut quasi sed iure? Officiis adipisci porro, qui temporibus molestiae labore molestias exercitationem officia ratione consequuntur totam odio fugiat dolore nemo quos cupiditate expedita culpa doloremque. Atque sed aut officia praesentium magni qui nisi, iure rerum quas necessitatibus, maiores omnis facere dolores accusamus minima doloribus dolorem, repellat hic pariatur quam aliquid asperiores soluta! Dolores nisi fugit illo eligendi tempore dicta, sed, perferendis natus ducimus libero mollitia quisquam alias in expedita dolor eaque, repellat nobis culpa! Atque possimus vel ipsam, explicabo eius nesciunt laborum omnis, perspiciatis perferendis quidem repellendus tenetur tempora vero, facilis architecto autem? Ipsum in dolorum dolores magnam error rerum nostrum."
+            }
+          />
+        </View>
+
+        <View style={styles.post}>
+          <PostHead
+            Profilepicture={require("../assets/images/IMG-20251118-WA0021.jpg")}
+            Username={"Chris Oreofe"}
+            Details={"Learning frontend dev along side mobile dev"}
+            days={"3mo"}
+          />
+          <Postcontent
+            content={
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error"
+            }
+            contentpost={require("../assets/images/IMG-20250117-WA0063.jpg")}
+          />
+        </View>
+
+        <View style={styles.post}>
+          <PostHead
+            Profilepicture={require("../assets/images/WhatsApp Image 2.jpeg")}
+            Username={"User Name"}
+            Details={"Student @ Unilorin|| Student @ TechCrush"}
+            days={"2y"}
+          />
+          <Noimagepost
+            content={
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, dolorem provident quaerat a ratione expedita molestias rem magni. Consectetur aperiam, doloribus sit non ipsam minima inventore pariatur commodi at quidem voluptas quisquam quaerat. Deleniti perferendis ducimus adipisci sequi quos minus, dolores maiores labore culpa numquam sit temporibus sapiente nobis praesentium ipsam incidunt iste earum nulla aspernatur veritatis vitae consequuntur autem animi? Incidunt quisquam labore blanditiis hic recusandae voluptatum laborum laboriosam. Quia esse laborum illo nulla! Qui mollitia voluptatibus vitae quidem quaerat deleniti quia repellat maiores at sit officiis aliquid voluptatum numquam, id asperiores modi corrupti doloremque architecto nihil aut quasi sed iure? Officiis adipisci porro, qui temporibus molestiae labore molestias exercitationem officia ratione consequuntur totam odio fugiat dolore nemo quos cupiditate expedita culpa doloremque. Atque sed aut officia praesentium magni qui nisi, iure rerum quas necessitatibus, maiores omnis facere dolores accusamus minima doloribus dolorem, repellat hic pariatur quam aliquid asperiores soluta! Dolores nisi fugit illo eligendi tempore dicta, sed, perferendis natus ducimus libero mollitia quisquam alias in expedita dolor eaque, repellat nobis culpa! Atque possimus vel ipsam, explicabo eius nesciunt laborum omnis, perspiciatis perferendis quidem repellendus tenetur tempora vero, facilis architecto autem? Ipsum in dolorum dolores magnam error rerum nostrum."
+            }
+          />
+        </View>
+      </ScrollView>
+      <BottomTab />
     </SafeAreaView>
-  );
+  );  
 }

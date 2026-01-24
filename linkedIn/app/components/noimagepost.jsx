@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 // import PostHead from "./posthead";
 import { useState } from "react";
 
-const Postcontent = ({
+const Noimagepost = ({
   content,
   //  ...style,
   contentpost,
@@ -36,20 +36,19 @@ const Postcontent = ({
             less
           </Text>
         )}
-        <Image style={styles.image} source={contentpost} />
+        {/* <Image style={styles.image} source={contentpost} /> */}
       </View>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  image: {
-    width: "100%",
-    height: 300,
-    // resizeMode: "cover"
-    // aspectRatio: 1
-  },
+// const styles = StyleSheet.create({
+//   image: {
+//     width: "100%",
+//     height: 300,
+//     // resizeMode: "cover"
+//     // aspectRatio: 1
+//   },
+// });
 
-});
-
-export default Postcontent;
+export default Noimagepost;
