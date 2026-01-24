@@ -39,17 +39,47 @@ const Noimagepost = ({
         )}
         {/* <Image style={styles.image} source={contentpost} /> */}
       </View>
+
+            <View style={styles.activitybar}>
+              <TouchableOpacity style={{ alignItems: "center" }}>
+                <Ionicons name="thumbs-up-outline" size={20} color="black" />
+                <Text style={{ color: "grey", fontSize: 10 }}>Like</Text>
+              </TouchableOpacity>
+      
+              <TouchableOpacity style={{ alignItems: "center" }}>
+                <Ionicons name="chatbox-outline" size={20} color="black" />
+                <Text style={{ color: "grey", fontSize: 10 }}>Comment</Text>
+              </TouchableOpacity>
+             
+      
+              <TouchableOpacity style={{ alignItems: "center" }}>
+                <Ionicons name="sync-outline" size={20} color="black" />
+                <Text style={{ color: "grey", fontSize: 10 }}>Repost</Text>
+              </TouchableOpacity>
+      
+              <TouchableOpacity style={{ alignItems: "center" }}>
+                <Ionicons name="paper-plane-outline" size={20} color="black" />
+                <Text style={{ color: "grey", fontSize: 10 }}>Send</Text>
+              </TouchableOpacity>
+             
+            </View>
     </View>
   );
 };
 
-// const styles = StyleSheet.create({
-//   image: {
-//     width: "100%",
-//     height: 300,
-//     // resizeMode: "cover"
-//     // aspectRatio: 1
-//   },
-// });
+const styles = StyleSheet.create({
+  // image: {
+  //   width: "100%",
+  //   height: 300,
+  //   // resizeMode: "cover"
+  //   // aspectRatio: 1
+  // },
+
+  activitybar: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingTop: 15,
+  },
+});
 
 export default Noimagepost;

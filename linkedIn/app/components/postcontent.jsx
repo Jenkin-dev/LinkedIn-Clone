@@ -41,11 +41,34 @@ const Postcontent = ({
             less
           </Text>
         )}
-        <Image style={[styles.image, {aspectRatio: dynamicRatio}]} source={contentpost} />
+        <Image
+          style={[styles.image, { aspectRatio: dynamicRatio }]}
+          source={contentpost}
+        />
       </View>
 
-      <View>
-        <Ionicons name="thumbs-up-outline" size={20} />
+      <View style={styles.activitybar}>
+        <TouchableOpacity style={{ alignItems: "center" }}>
+          <Ionicons name="thumbs-up-outline" size={20} color="black" />
+          <Text style={{ color: "grey", fontSize: 10 }}>Like</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={{ alignItems: "center" }}>
+          <Ionicons name="chatbox-outline" size={20} color="black" />
+          <Text style={{ color: "grey", fontSize: 10 }}>Comment</Text>
+        </TouchableOpacity>
+       
+
+        <TouchableOpacity style={{ alignItems: "center" }}>
+          <Ionicons name="sync-outline" size={20} color="black" />
+          <Text style={{ color: "grey", fontSize: 10 }}>Repost</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={{ alignItems: "center" }}>
+          <Ionicons name="paper-plane-outline" size={20} color="black" />
+          <Text style={{ color: "grey", fontSize: 10 }}>Send</Text>
+        </TouchableOpacity>
+       
       </View>
     </View>
   );
@@ -59,6 +82,11 @@ const styles = StyleSheet.create({
     // aspectRatio: width / height,
   },
 
+  activitybar: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingTop: 15
+  },
 });
 
 export default Postcontent;
