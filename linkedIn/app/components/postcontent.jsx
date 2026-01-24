@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 // import PostHead from "./posthead";
 import { useState } from "react";
+import { Ionicons, Entypo } from "@expo/vector-icons";
 
 const Postcontent = ({
   content,
@@ -8,6 +9,10 @@ const Postcontent = ({
   contentpost,
 }) => {
   const [readMore, setReadMore] = useState(false);
+
+  const { width, height } = Image.resolveAssetSource(contentpost); //this takes the exact scale of the image in content post
+
+  const dynamicRatio = width / height;
   return (
     <View>
       {/* <PostHead /> */}
@@ -36,7 +41,11 @@ const Postcontent = ({
             less
           </Text>
         )}
-        <Image style={styles.image} source={contentpost} />
+        <Image style={[styles.image, {aspectRatio: dynamicRatio}]} source={contentpost} />
+      </View>
+
+      <View>
+        <Ionicons name="thumbs-up-outline" size={20} />
       </View>
     </View>
   );
@@ -45,9 +54,9 @@ const Postcontent = ({
 const styles = StyleSheet.create({
   image: {
     width: "100%",
-    height: 300,
-    // resizeMode: "cover"
-    // aspectRatio: 1
+    height: undefined,
+    // resizeMode: "cover",
+    // aspectRatio: width / height,
   },
 
 });

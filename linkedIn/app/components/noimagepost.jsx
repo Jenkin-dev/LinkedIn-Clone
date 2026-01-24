@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 // import PostHead from "./posthead";
 import { useState } from "react";
+import { Ionicons, Entypo } from "@expo/vector-icons";
 
 const Noimagepost = ({
   content,
