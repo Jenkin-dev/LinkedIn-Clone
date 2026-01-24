@@ -39,25 +39,30 @@ const Noimagepost = ({
             less
           </Text>
         )}
-        <View style={styles.activitydetails}>
-          <View style={styles.icons}>
+     <View style={styles.activitydetails}>
+        <View style={styles.icons}>
+          <View style={{ borderRadius: 10, backgroundColor: "blue" }}>
             <Ionicons
               name="thumbs-up"
               color={"white"}
-              backgroundColor={"blue"}
-              // size={10}
+              // backgroundColor={"blue"}
+              size={15}
             />
+          </View>
+
+          <View style={{ borderRadius: 10, backgroundColor: "red" }}>
             <Ionicons
               name="heart"
               color={"white"}
-              backgroundColor={"red"}
-              // size={10}
+              // backgroundColor={"red"}
+              size={15}
             />
-            {/* <Ionicons name="thumbs-up" color={'black'} backgroundColor={'red'}/> */}
-            <Text>{likes}</Text>
           </View>
-          <Text>{commentslikes}</Text>
+          {/* <Ionicons name="thumbs-up" color={'black'} backgroundColor={'red'}/> */}
+          <Text>{likes}</Text>
         </View>
+        <Text>{commentslikes}</Text>
+      </View>
       </View>
 
       <View style={styles.activitybar}>
