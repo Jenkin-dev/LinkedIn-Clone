@@ -7,6 +7,8 @@ const Postcontent = ({
   content,
   //  ...style,
   contentpost,
+  likes,
+  commentslikes,
 }) => {
   const [readMore, setReadMore] = useState(false);
 
@@ -46,7 +48,30 @@ const Postcontent = ({
           source={contentpost}
         />
       </View>
+      <View style={styles.activitydetails}>
+        <View style={styles.icons}>
+          <View style={{ borderRadius: 10, backgroundColor: "blue" }}>
+            <Ionicons
+              name="thumbs-up"
+              color={"white"}
+              // backgroundColor={"blue"}
+              size={15}
+            />
+          </View>
 
+          <View style={{ borderRadius: 10, backgroundColor: "red" }}>
+            <Ionicons
+              name="heart"
+              color={"white"}
+              // backgroundColor={"red"}
+              size={15}
+            />
+          </View>
+          {/* <Ionicons name="thumbs-up" color={'black'} backgroundColor={'red'}/> */}
+          <Text>{likes}</Text>
+        </View>
+        <Text>{commentslikes}</Text>
+      </View>
       <View style={styles.activitybar}>
         <TouchableOpacity style={{ alignItems: "center" }}>
           <Ionicons name="thumbs-up-outline" size={20} color="black" />
@@ -57,7 +82,6 @@ const Postcontent = ({
           <Ionicons name="chatbox-outline" size={20} color="black" />
           <Text style={{ color: "grey", fontSize: 10 }}>Comment</Text>
         </TouchableOpacity>
-       
 
         <TouchableOpacity style={{ alignItems: "center" }}>
           <Ionicons name="sync-outline" size={20} color="black" />
@@ -68,7 +92,6 @@ const Postcontent = ({
           <Ionicons name="paper-plane-outline" size={20} color="black" />
           <Text style={{ color: "grey", fontSize: 10 }}>Send</Text>
         </TouchableOpacity>
-       
       </View>
     </View>
   );
@@ -85,7 +108,16 @@ const styles = StyleSheet.create({
   activitybar: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingTop: 15
+    paddingTop: 3,
+  },
+
+  activitydetails: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
+  icons: {
+    flexDirection: "row",
   },
 });
 
