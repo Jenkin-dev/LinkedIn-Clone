@@ -179,6 +179,21 @@ export default function Index() {
             }
           />
         </View>
+
+        <View style={styles.post}>
+          <PostHead
+            Profilepicture={
+              require("../assets/images/IMG-20251118-WA0021.jpg")}
+            Username={"Undefined User"}
+            Details={"Anonymous user "}
+            days={"10y"}
+          />
+          <Noimagepost
+            content={
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, dolorem provident quaerat a ratione expedita molestias rem magni. Consectetur aperiam, doloribus sit non ipsam minima inventore pariatur commodi at quidem voluptas quisquam quaerat. Deleniti perferendis ducimus adipisci sequi quos minus, dolores maiores labore culpa numquam sit temporibus sapiente nobis praesentium ipsam incidunt iste earum nulla aspernatur veritatis vitae consequuntur autem animi? Incidunt quisquam labore blanditiis hic recusandae voluptatum laborum laboriosam. Quia esse laborum illo nulla! Qui mollitia voluptatibus vitae quidem quaerat deleniti quia repellat maiores at sit officiis aliquid voluptatum numquam, id asperiores modi corrupti doloremque architecto nihil aut quasi sed iure? Officiis adipisci porro, qui temporibus molestiae labore molestias exercitationem officia ratione consequuntur totam odio fugiat dolore nemo quos cupiditate expedita culpa doloremque. Atque sed aut officia praesentium magni qui nisi, iure rerum quas necessitatibus, maiores omnis facere dolores accusamus minima doloribus dolorem, repellat hic pariatur quam aliquid asperiores soluta! Dolores nisi fugit illo eligendi tempore dicta, sed, perferendis natus ducimus libero mollitia quisquam alias in expedita dolor eaque, repellat nobis culpa! Atque possimus vel ipsam, explicabo eius nesciunt laborum omnis, perspiciatis perferendis quidem repellendus tenetur tempora vero, facilis architecto autem? Ipsum in dolorum dolores magnam error rerum nostrum."
+            }
+          />
+        </View>
       </ScrollView>
       <BottomTab />
     </SafeAreaView>
