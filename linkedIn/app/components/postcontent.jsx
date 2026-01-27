@@ -29,7 +29,8 @@ const Postcontent = ({
         <Text
           //if readMore is true, show full text else show just two lines of the text
           numberOfLines={readMore ? undefined : 2}
-          onPress={() => setReadMore(!readMore)}
+          onPress={() => setReadMore(!readMore)} 
+          style = {styles.post}
         >
           {content}
         </Text>

@@ -7,40 +7,50 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import { useState } from "react";
 
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import PostHead from "./components/posthead";
 import Postcontent from "./components/postcontent";
 import BottomTab from "./components/bottomtab";
 import Noimagepost from "./components/noimagepost";
 
-const styles = StyleSheet.create({
-  homepage: {
-    backgroundColor: "offwhite",
-    flex: 1,
-    padding: 20,
-  },
-  post: {
-    marginVertical: 5,
-    backgroundColor: "white",
-    padding: 10,
-  },
-
-  topbar: {
-    flexDirection: "row",
-    gap: 20,
-    // backgroundColor: "pink",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-    marginBottom: 10,
-  },
-});
-
 export default function Index() {
+  const [theme, setTheme] = useState(false);
+  const styles = StyleSheet.create({
+    homepage: {
+      backgroundColor: theme ? "#121212" : "white",
+      flex: 1,
+      padding: 20,
+    },
+    post: {
+      marginVertical: 5,
+      backgroundColor: theme ? "#1E1E1E" : "white",
+      padding: 10,
+    },
+
+    topbar: {
+      flexDirection: "row",
+      gap: 20,
+      // backgroundColor: "pink",
+      alignItems: "center",
+      justifyContent: "center",
+      position: "relative",
+      marginBottom: 10,
+    },
+  });
+
   return (
     <SafeAreaView style={styles.homepage}>
+      <MaterialCommunityIcons
+        name="theme-light-dark"
+        size={24}
+        color= {theme ? "white" : "black"}
+        style={{ alignSelf: "flex-end", paddingBottom: 10 }}
+        onPress={() => setTheme(!theme)}
+      />
       <View style={styles.topbar}>
         <Image
           style={{ width: 35, height: 35, borderRadius: 25 }}
