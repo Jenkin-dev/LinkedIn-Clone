@@ -1,10 +1,11 @@
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { Ionicons, Entypo } from "@expo/vector-icons";
+import { useState } from "react";
 // import { Entypo } from "@expo/vector-icons";
-const PostHead = ({Username, Details, Profilepicture, days}) => {
+const PostHead = ({ Username, Details, Profilepicture, days }) => {
+  const [followed, setfollowed] = useState(false);
+
   return (
-
-
     <View
       style={{
         flexDirection: "row",
@@ -21,9 +22,7 @@ const PostHead = ({Username, Details, Profilepicture, days}) => {
       />
       <View style={{ flex: 1 }}>
         <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
-          <Text style={{ fontWeight: "bold", fontSize: 17 }}>
-         {Username}
-          </Text>
+          <Text style={{ fontWeight: "bold", fontSize: 17 }}>{Username}</Text>
           <Ionicons name="shield-checkmark-outline" size={15} />
           <View style={{ flexDirection: "row", gap: 0 }}>
             <Entypo name="dot-single" />
@@ -35,7 +34,12 @@ const PostHead = ({Username, Details, Profilepicture, days}) => {
         <Text style={{ fontSize: 12 }}>{days}</Text>
       </View>
       <TouchableOpacity style={{ flexDirection: "row", gap: 10 }}>
-        <Text style={{ color: "blue" }}>Follow</Text>
+        <Text
+          onPress={() => setfollowed(!followed)}
+          style={{ color: followed ? "purple" : "blue" }}
+        >
+          {followed ? "✔Following" : "Follow"}
+        </Text>
         {/* <Ionicons name="ellipsis-vertical"/> */}
       </TouchableOpacity>
       <TouchableOpacity>

@@ -11,8 +11,8 @@ const Postcontent = ({
   commentslikes,
 }) => {
   const [readMore, setReadMore] = useState(false);
+  const [width, height] = [Image.resolveAssetSource(contentpost).width, Image.resolveAssetSource(contentpost).height];
 
-  const { width, height } = Image.resolveAssetSource(contentpost); //this takes the exact scale of the image in content post
 
   const dynamicRatio = width / height;
   return (

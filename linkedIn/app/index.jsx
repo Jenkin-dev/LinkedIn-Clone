@@ -238,7 +238,7 @@ export default function Index() {
             content={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error"
             }
-            contentpost={require("../assets/images/IMG-20250117-WA0063.jpg")}
+            contentpost={require("../assets/images/Big sis logo.jpg")}
             likes={14}
             commentslikes={"203 comments 14 likes"}
           />
