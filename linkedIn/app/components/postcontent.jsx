@@ -23,26 +23,14 @@ const Postcontent = ({
         <Text
           //if readMore is true, show full text else show just two lines of the text
           numberOfLines={readMore ? undefined : 2}
+          onPress={() => setReadMore(!readMore)}
         >
           {content}
         </Text>
-        {!readMore && (
-          <Text
-            onPress={() => setReadMore(!readMore)}
-            style={{ color: "grey", fontWeight: 600 }}
-          >
-            more
-          </Text>
-        )}
+        <Text style={{ color: "grey", fontWeight: 600 }}>
+          {readMore ? "...see less" : " ...see more"}
+        </Text>
 
-        {readMore && (
-          <Text
-            onPress={() => setReadMore(!readMore)}
-            style={{ color: "grey", fontWeight: 600 }}
-          >
-            less
-          </Text>
-        )}
         <Image
           style={[styles.image, { aspectRatio: dynamicRatio }]}
           source={contentpost}

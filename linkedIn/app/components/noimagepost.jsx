@@ -19,50 +19,36 @@ const Noimagepost = ({
         <Text
           //if readMore is true, show full text else show just two lines of the text
           numberOfLines={readMore ? undefined : 2}
+          onPress={() => setReadMore(!readMore)}
         >
           {content}
         </Text>
-        {!readMore && (
-          <Text
-            onPress={() => setReadMore(!readMore)}
-            style={{ color: "grey", fontWeight: 600 }}
-          >
-            more
-          </Text>
-        )}
+        <Text style={{ color: "grey", fontWeight: 600 }}>{readMore ? '...read less': '...read more'}</Text>
 
-        {readMore && (
-          <Text
-            onPress={() => setReadMore(!readMore)}
-            style={{ color: "grey", fontWeight: 600 }}
-          >
-            less
-          </Text>
-        )}
-     <View style={styles.activitydetails}>
-        <View style={styles.icons}>
-          <View style={{ borderRadius: 10, backgroundColor: "blue" }}>
-            <Ionicons
-              name="thumbs-up"
-              color={"white"}
-              // backgroundColor={"blue"}
-              size={15}
-            />
-          </View>
+        <View style={styles.activitydetails}>
+          <View style={styles.icons}>
+            <View style={{ borderRadius: 10, backgroundColor: "blue" }}>
+              <Ionicons
+                name="thumbs-up"
+                color={"white"}
+                // backgroundColor={"blue"}
+                size={15}
+              />
+            </View>
 
-          <View style={{ borderRadius: 10, backgroundColor: "red" }}>
-            <Ionicons
-              name="heart"
-              color={"white"}
-              // backgroundColor={"red"}
-              size={15}
-            />
+            <View style={{ borderRadius: 10, backgroundColor: "red" }}>
+              <Ionicons
+                name="heart"
+                color={"white"}
+                // backgroundColor={"red"}
+                size={15}
+              />
+            </View>
+            {/* <Ionicons name="thumbs-up" color={'black'} backgroundColor={'red'}/> */}
+            <Text>{likes}</Text>
           </View>
-          {/* <Ionicons name="thumbs-up" color={'black'} backgroundColor={'red'}/> */}
-          <Text>{likes}</Text>
+          <Text>{commentslikes}</Text>
         </View>
-        <Text>{commentslikes}</Text>
-      </View>
       </View>
 
       <View style={styles.activitybar}>
