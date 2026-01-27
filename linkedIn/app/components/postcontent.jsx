@@ -11,8 +11,14 @@ const Postcontent = ({
   commentslikes,
 }) => {
   const [readMore, setReadMore] = useState(false);
-  const [width, height] = [Image.resolveAssetSource(contentpost).width, Image.resolveAssetSource(contentpost).height];
-
+  const [width, height] = [
+    Image.resolveAssetSource(contentpost).width,
+    Image.resolveAssetSource(contentpost).height,
+  ];
+  const [liked, setLiked] = useState(false);
+  const [commented, setCommented] = useState(false);
+  const [reposted, setReposted] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const dynamicRatio = width / height;
   return (
@@ -60,25 +66,46 @@ const Postcontent = ({
         </View>
         <Text>{commentslikes}</Text>
       </View>
+
       <View style={styles.activitybar}>
         <TouchableOpacity style={{ alignItems: "center" }}>
-          <Ionicons name="thumbs-up-outline" size={20} color="black" />
+          <Ionicons
+            name={liked ? "thumbs-up" : "thumbs-up-outline"}
+            size={20}
+            color={liked ? "blue" : "black"}
+            onPress={() => setLiked(!liked)}
+          />
           <Text style={{ color: "grey", fontSize: 10 }}>Like</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={{ alignItems: "center" }}>
-          <Ionicons name="chatbox-outline" size={20} color="black" />
+          <Ionicons
+            name="chatbox-outline"
+            size={20}
+            color={commented ? "blue" : "black"}
+            onPress={() => setCommented(!commented)}
+          />
           <Text style={{ color: "grey", fontSize: 10 }}>Comment</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={{ alignItems: "center" }}>
-          <Ionicons name="sync-outline" size={20} color="black" />
+          <Ionicons
+            name="sync-outline"
+            size={20}
+            color={reposted ? "blue" : "black"}
+            onPress={() => setReposted(!reposted)}
+          />
           <Text style={{ color: "grey", fontSize: 10 }}>Repost</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={{ alignItems: "center" }}>
-          <Ionicons name="paper-plane-outline" size={20} color="black" />
-          <Text style={{ color: "grey", fontSize: 10 }}>Send</Text>
+          <Ionicons
+            name= {sent ? "paper-plane" : "paper-plane-outline"}
+            size={20}
+            color= {sent ? "blue" : "black"}
+            onPress={() => setSent(!sent)}
+          />
+          <Text style={{ color: "grey", fontSize: 10 }}>{sent ? 'sent' : 'send'}</Text>
         </TouchableOpacity>
       </View>
     </View>
