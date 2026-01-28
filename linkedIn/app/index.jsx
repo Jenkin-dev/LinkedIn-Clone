@@ -12,10 +12,10 @@ import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import PostHead from "./components/posthead";
-import Postcontent from "./components/postcontent";
-import BottomTab from "./components/bottomtab";
-import Noimagepost from "./components/noimagepost";
+import PostHead from "../components/posthead";
+import Postcontent from "../components/postcontent";
+import BottomTab from "../components/bottomtab";
+import Noimagepost from "../components/noimagepost";
 
 export default function Index() {
   const [theme, setTheme] = useState(false); //false for light mode , true for dark mode
@@ -275,7 +275,7 @@ export default function Index() {
           />
         </View>
       </ScrollView>
-      <BottomTab theme={theme}/>
+      {/* <BottomTab/> */}
     </SafeAreaView>
   );
 }

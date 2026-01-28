@@ -1,7 +1,7 @@
 import { View, TouchableOpacity, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const BottomTab = (theme) => {
+const BottomTab = () => {
   return (
     <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
       <TouchableOpacity style={{alignItems: "center"}}><Ionicons name="home" size={30} color='#7597a2' /><Text style={{color: 'grey', fontSize: 10}}>Home</Text></TouchableOpacity>
