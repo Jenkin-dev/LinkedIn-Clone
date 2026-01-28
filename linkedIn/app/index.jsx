@@ -6,8 +6,10 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
+  Pressable,
 } from "react-native";
 import { useState } from "react";
+import { router } from "expo-router";
 
 import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -16,6 +18,7 @@ import PostHead from "../components/posthead";
 import Postcontent from "../components/postcontent";
 import BottomTab from "../components/bottomtab";
 import Noimagepost from "../components/noimagepost";
+
 
 export default function Index() {
   const [theme, setTheme] = useState(false); //false for light mode , true for dark mode
@@ -59,7 +62,7 @@ export default function Index() {
 
         <Ionicons
           name="search"
-          color={'grey'}
+          color={"grey"}
           size={20}
           style={{ position: "absolute", left: 60 }}
         />
@@ -100,7 +103,7 @@ export default function Index() {
             Profilepicture={require("../assets/images/WhatsApp Image 2.jpeg")}
           />
           <Postcontent
-          theme={theme}
+            theme={theme}
             content={
               "This is a demo content where i am using props in a reusable component. I am meant to make it at least more than two lines long in order for the read more button to function properly since I set the number of lines for readmore not true to be 2 lines. Well that' by the way. In this project ,I successfuly used reusable components to Insert the post head and the information that is within the contents of this post "
             }
@@ -118,7 +121,7 @@ export default function Index() {
             days={"9d"}
           />
           <Postcontent
-          theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error"
             }
@@ -137,7 +140,7 @@ export default function Index() {
             days={"5d"}
           />
           <Postcontent
-          theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error "
             }
@@ -155,7 +158,7 @@ export default function Index() {
             days={"2w"}
           />
           <Noimagepost
-        theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, dolorem provident quaerat a ratione expedita molestias rem magni. Consectetur aperiam, doloribus sit non ipsam minima inventore pariatur commodi at quidem voluptas quisquam quaerat. Deleniti perferendis ducimus adipisci sequi quos minus, dolores maiores labore culpa numquam sit temporibus sapiente nobis praesentium ipsam incidunt iste earum nulla aspernatur veritatis vitae consequuntur autem animi? Incidunt quisquam labore blanditiis hic recusandae voluptatum laborum laboriosam. Quia esse laborum illo nulla! Qui mollitia voluptatibus vitae quidem quaerat deleniti quia repellat maiores at sit officiis aliquid voluptatum numquam, id asperiores modi corrupti doloremque architecto nihil aut quasi sed iure? Officiis adipisci porro, qui temporibus molestiae labore molestias exercitationem officia ratione consequuntur totam odio fugiat dolore nemo quos cupiditate expedita culpa doloremque. Atque sed aut officia praesentium magni qui nisi, iure rerum quas necessitatibus, maiores omnis facere dolores accusamus minima doloribus dolorem, repellat hic pariatur quam aliquid asperiores soluta! Dolores nisi fugit illo eligendi tempore dicta, sed, perferendis natus ducimus libero mollitia quisquam alias in expedita dolor eaque, repellat nobis culpa! Atque possimus vel ipsam, explicabo eius nesciunt laborum omnis, perspiciatis perferendis quidem repellendus tenetur tempora vero, facilis architecto autem? Ipsum in dolorum dolores magnam error rerum nostrum."
             }
@@ -173,7 +176,7 @@ export default function Index() {
             days={"2y"}
           />
           <Noimagepost
-          theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, dolorem provident quaerat a ratione expedita molestias rem magni. Consectetur aperiam, doloribus sit non ipsam minima inventore pariatur commodi at quidem voluptas quisquam quaerat. Deleniti perferendis ducimus adipisci sequi quos minus, dolores maiores labore culpa numquam sit temporibus sapiente nobis praesentium ipsam incidunt iste earum nulla aspernatur veritatis vitae consequuntur autem animi? Incidunt quisquam labore blanditiis hic recusandae voluptatum laborum laboriosam. Quia esse laborum illo nulla! Qui mollitia voluptatibus vitae quidem quaerat deleniti quia repellat maiores at sit officiis aliquid voluptatum numquam, id asperiores modi corrupti doloremque architecto nihil aut quasi sed iure? Officiis adipisci porro, qui temporibus molestiae labore molestias exercitationem officia ratione consequuntur totam odio fugiat dolore nemo quos cupiditate expedita culpa doloremque. Atque sed aut officia praesentium magni qui nisi, iure rerum quas necessitatibus, maiores omnis facere dolores accusamus minima doloribus dolorem, repellat hic pariatur quam aliquid asperiores soluta! Dolores nisi fugit illo eligendi tempore dicta, sed, perferendis natus ducimus libero mollitia quisquam alias in expedita dolor eaque, repellat nobis culpa! Atque possimus vel ipsam, explicabo eius nesciunt laborum omnis, perspiciatis perferendis quidem repellendus tenetur tempora vero, facilis architecto autem? Ipsum in dolorum dolores magnam error rerum nostrum."
             }
@@ -191,7 +194,7 @@ export default function Index() {
             days={"3mo"}
           />
           <Postcontent
-          theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error"
             }
@@ -210,7 +213,7 @@ export default function Index() {
             days={"2y"}
           />
           <Noimagepost
-          theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, dolorem provident quaerat a ratione expedita molestias rem magni. Consectetur aperiam, doloribus sit non ipsam minima inventore pariatur commodi at quidem voluptas quisquam quaerat. Deleniti perferendis ducimus adipisci sequi quos minus, dolores maiores labore culpa numquam sit temporibus sapiente nobis praesentium ipsam incidunt iste earum nulla aspernatur veritatis vitae consequuntur autem animi? Incidunt quisquam labore blanditiis hic recusandae voluptatum laborum laboriosam. Quia esse laborum illo nulla! Qui mollitia voluptatibus vitae quidem quaerat deleniti quia repellat maiores at sit officiis aliquid voluptatum numquam, id asperiores modi corrupti doloremque architecto nihil aut quasi sed iure? Officiis adipisci porro, qui temporibus molestiae labore molestias exercitationem officia ratione consequuntur totam odio fugiat dolore nemo quos cupiditate expedita culpa doloremque. Atque sed aut officia praesentium magni qui nisi, iure rerum quas necessitatibus, maiores omnis facere dolores accusamus minima doloribus dolorem, repellat hic pariatur quam aliquid asperiores soluta! Dolores nisi fugit illo eligendi tempore dicta, sed, perferendis natus ducimus libero mollitia quisquam alias in expedita dolor eaque, repellat nobis culpa! Atque possimus vel ipsam, explicabo eius nesciunt laborum omnis, perspiciatis perferendis quidem repellendus tenetur tempora vero, facilis architecto autem? Ipsum in dolorum dolores magnam error rerum nostrum."
             }
@@ -228,7 +231,7 @@ export default function Index() {
             days={"10y"}
           />
           <Noimagepost
-          theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, dolorem provident quaerat a ratione expedita molestias rem magni. Consectetur aperiam, doloribus sit non ipsam minima inventore pariatur commodi at quidem voluptas quisquam quaerat. Deleniti perferendis ducimus adipisci sequi quos minus, dolores maiores labore culpa numquam sit temporibus sapiente nobis praesentium ipsam incidunt iste earum nulla aspernatur veritatis vitae consequuntur autem animi? Incidunt quisquam labore blanditiis hic recusandae voluptatum laborum laboriosam. Quia esse laborum illo nulla! Qui mollitia voluptatibus vitae quidem quaerat deleniti quia repellat maiores at sit officiis aliquid voluptatum numquam, id asperiores modi corrupti doloremque architecto nihil aut quasi sed iure? Officiis adipisci porro, qui temporibus molestiae labore molestias exercitationem officia ratione consequuntur totam odio fugiat dolore nemo quos cupiditate expedita culpa doloremque. Atque sed aut officia praesentium magni qui nisi, iure rerum quas necessitatibus, maiores omnis facere dolores accusamus minima doloribus dolorem, repellat hic pariatur quam aliquid asperiores soluta! Dolores nisi fugit illo eligendi tempore dicta, sed, perferendis natus ducimus libero mollitia quisquam alias in expedita dolor eaque, repellat nobis culpa! Atque possimus vel ipsam, explicabo eius nesciunt laborum omnis, perspiciatis perferendis quidem repellendus tenetur tempora vero, facilis architecto autem? Ipsum in dolorum dolores magnam error rerum nostrum."
             }
@@ -246,7 +249,7 @@ export default function Index() {
             days={"3min"}
           />
           <Postcontent
-          theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error"
             }
@@ -265,7 +268,7 @@ export default function Index() {
             days={"3y"}
           />
           <Postcontent
-          theme={theme}
+            theme={theme}
             content={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repudiandae recusandae repellat doloribus deserunt facere. Ducimus modi incidunt excepturi perspiciatis non amet iure, placeat explicabo, debitis qui vitae commodi laudantium harum recusandae obcaecati repudiandae nesciunt, magni quis cumque ab! Error"
             }
@@ -275,7 +278,9 @@ export default function Index() {
           />
         </View>
       </ScrollView>
-      {/* <BottomTab/> */}
+
+   
+      <BottomTab/>
     </SafeAreaView>
   );
 }
