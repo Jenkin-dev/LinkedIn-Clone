@@ -66,7 +66,7 @@ const Noimagepost = ({
           <Ionicons
             name={liked ? "thumbs-up" : "thumbs-up-outline"}
             size={20}
-            color={liked ? "blue" : textcolor}
+            color={liked ? "blue" : }
             onPress={() => setLiked(!liked)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>Like</Text>

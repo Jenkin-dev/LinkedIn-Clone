@@ -75,7 +75,7 @@ const Postcontent = ({
           <Ionicons
             name={liked ? "thumbs-up" : "thumbs-up-outline"}
             size={20}
-            color={liked ? "blue" : "black"}
+            color={liked ? "blue" : "grey"}
             onPress={() => setLiked(!liked)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>Like</Text>
@@ -85,7 +85,7 @@ const Postcontent = ({
           <Ionicons
             name="chatbox-outline"
             size={20}
-            color={commented ? "blue" : "black"}
+            color={commented ? "blue" : "grey"}
             onPress={() => setCommented(!commented)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>Comment</Text>
@@ -95,7 +95,7 @@ const Postcontent = ({
           <Ionicons
             name="sync-outline"
             size={20}
-            color={reposted ? "blue" : "black"}
+            color={reposted ? "blue" : "grey"}
             onPress={() => setReposted(!reposted)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>Repost</Text>
@@ -105,7 +105,7 @@ const Postcontent = ({
           <Ionicons
             name= {sent ? "paper-plane" : "paper-plane-outline"}
             size={20}
-            color= {sent ? "blue" : "black"}
+            color= {sent ? "blue" : "grey"}
             onPress={() => setSent(!sent)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>{sent ? 'sent' : 'send'}</Text>
