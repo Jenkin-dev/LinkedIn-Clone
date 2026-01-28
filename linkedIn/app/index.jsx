@@ -21,7 +21,7 @@ export default function Index() {
   const [theme, setTheme] = useState(false); //false for light mode , true for dark mode
   const styles = StyleSheet.create({
     homepage: {
-      backgroundColor: theme ? "#121212" : "white",
+      backgroundColor: theme ? "#121212" : "whitesmoke",
       flex: 1,
       padding: 20,
     },
@@ -275,7 +275,7 @@ export default function Index() {
           />
         </View>
       </ScrollView>
-      <BottomTab />
+      <BottomTab theme={theme}/>
     </SafeAreaView>
   );
 }

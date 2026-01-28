@@ -9,7 +9,7 @@ const Postcontent = ({
   contentpost,
   likes,
   commentslikes,
-  theme
+  theme,
 }) => {
   const [readMore, setReadMore] = useState(false);
   const [width, height] = [
@@ -31,8 +31,8 @@ const Postcontent = ({
         <Text
           //if readMore is true, show full text else show just two lines of the text
           numberOfLines={readMore ? undefined : 2}
-          onPress={() => setReadMore(!readMore)} 
-          style = {{ color: textcolor }}
+          onPress={() => setReadMore(!readMore)}
+          style={{ color: textcolor }}
         >
           {content}
         </Text>
@@ -65,9 +65,9 @@ const Postcontent = ({
             />
           </View>
           {/* <Ionicons name="thumbs-up" color={'black'} backgroundColor={'red'}/> */}
-          <Text>{likes}</Text>
+          <Text style={{ color: "grey" }}>{likes}</Text>
         </View>
-        <Text>{commentslikes}</Text>
+        <Text style={{ color: "grey" }}>{commentslikes}</Text>
       </View>
 
       <View style={styles.activitybar}>
@@ -103,12 +103,14 @@ const Postcontent = ({
 
         <TouchableOpacity style={{ alignItems: "center" }}>
           <Ionicons
-            name= {sent ? "paper-plane" : "paper-plane-outline"}
+            name={sent ? "paper-plane" : "paper-plane-outline"}
             size={20}
-            color= {sent ? "blue" : "grey"}
+            color={sent ? "blue" : "grey"}
             onPress={() => setSent(!sent)}
           />
-          <Text style={{ color: "grey", fontSize: 10 }}>{sent ? 'sent' : 'send'}</Text>
+          <Text style={{ color: "grey", fontSize: 10 }}>
+            {sent ? "sent" : "send"}
+          </Text>
         </TouchableOpacity>
       </View>
     </View>

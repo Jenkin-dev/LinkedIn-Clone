@@ -1,6 +1,7 @@
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 import { useState } from "react";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 // import { Entypo } from "@expo/vector-icons";
 const PostHead = ({ Username, Details, Profilepicture, days, theme }) => {
   const [followed, setfollowed] = useState(false);
@@ -24,10 +25,12 @@ const PostHead = ({ Username, Details, Profilepicture, days, theme }) => {
       />
       <View style={{ flex: 1 }}>
         <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
-          <Text style={{ fontWeight: "bold", fontSize: 17, color: textcolor}}>{Username}</Text>
-          <Ionicons name="shield-checkmark-outline" size={15} color={textcolor}/>
+          <Text style={{ fontWeight: "bold", fontSize: 17, color: textcolor }}>
+            {Username}
+          </Text>
+          <MaterialIcons name="verified" size={15} color={textcolor} />
           <View style={{ flexDirection: "row", gap: 0 }}>
-            <Entypo name="dot-single" color={textcolor}/>
+            <Entypo name="dot-single" color={textcolor} />
             {/* <Text style={{ fontSize: 10 }}>3rd+</Text> */}
           </View>
         </View>
@@ -45,7 +48,7 @@ const PostHead = ({ Username, Details, Profilepicture, days, theme }) => {
         {/* <Ionicons name="ellipsis-vertical"/> */}
       </TouchableOpacity>
       <TouchableOpacity>
-        <Entypo name="dots-three-vertical" size={15} color={textcolor}/>
+        <Entypo name="dots-three-vertical" size={15} color={textcolor} />
       </TouchableOpacity>
     </View>
   );
