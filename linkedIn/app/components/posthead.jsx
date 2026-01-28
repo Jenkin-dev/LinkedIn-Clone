@@ -2,8 +2,9 @@ import { View, Image, Text, TouchableOpacity } from "react-native";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 import { useState } from "react";
 // import { Entypo } from "@expo/vector-icons";
-const PostHead = ({ Username, Details, Profilepicture, days }) => {
+const PostHead = ({ Username, Details, Profilepicture, days, theme }) => {
   const [followed, setfollowed] = useState(false);
+  const textcolor = theme ? "white" : "black";
 
   return (
     <View
@@ -14,6 +15,7 @@ const PostHead = ({ Username, Details, Profilepicture, days }) => {
         // backgroundColor: "white",
         marginVertical: 10,
         // justifyContent: "flex-end"
+        // color: textcolor,
       }}
     >
       <Image
@@ -22,16 +24,16 @@ const PostHead = ({ Username, Details, Profilepicture, days }) => {
       />
       <View style={{ flex: 1 }}>
         <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
-          <Text style={{ fontWeight: "bold", fontSize: 17 }}>{Username}</Text>
-          <Ionicons name="shield-checkmark-outline" size={15} />
+          <Text style={{ fontWeight: "bold", fontSize: 17, color: textcolor}}>{Username}</Text>
+          <Ionicons name="shield-checkmark-outline" size={15} color={textcolor}/>
           <View style={{ flexDirection: "row", gap: 0 }}>
-            <Entypo name="dot-single" />
+            <Entypo name="dot-single" color={textcolor}/>
             {/* <Text style={{ fontSize: 10 }}>3rd+</Text> */}
           </View>
         </View>
 
-        <Text style={{ fontSize: 12 }}>{Details}.</Text>
-        <Text style={{ fontSize: 12 }}>{days}</Text>
+        <Text style={{ fontSize: 12, color: textcolor }}>{Details}</Text>
+        <Text style={{ fontSize: 12, color: textcolor }}>{days}</Text>
       </View>
       <TouchableOpacity style={{ flexDirection: "row", gap: 10 }}>
         <Text
@@ -43,7 +45,7 @@ const PostHead = ({ Username, Details, Profilepicture, days }) => {
         {/* <Ionicons name="ellipsis-vertical"/> */}
       </TouchableOpacity>
       <TouchableOpacity>
-        <Entypo name="dots-three-vertical" size={15} />
+        <Entypo name="dots-three-vertical" size={15} color={textcolor}/>
       </TouchableOpacity>
     </View>
   );

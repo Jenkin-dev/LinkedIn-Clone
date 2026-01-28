@@ -9,6 +9,7 @@ const Postcontent = ({
   contentpost,
   likes,
   commentslikes,
+  theme
 }) => {
   const [readMore, setReadMore] = useState(false);
   const [width, height] = [
@@ -20,6 +21,7 @@ const Postcontent = ({
   const [reposted, setReposted] = useState(false);
   const [sent, setSent] = useState(false);
 
+  const textcolor = theme ? "white" : "black";
   const dynamicRatio = width / height;
   return (
     <View>
@@ -30,7 +32,7 @@ const Postcontent = ({
           //if readMore is true, show full text else show just two lines of the text
           numberOfLines={readMore ? undefined : 2}
           onPress={() => setReadMore(!readMore)} 
-          style = {styles.post}
+          style = {{ color: textcolor }}
         >
           {content}
         </Text>

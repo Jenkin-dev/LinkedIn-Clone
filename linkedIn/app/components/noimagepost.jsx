@@ -9,6 +9,7 @@ const Noimagepost = ({
   contentpost,
   likes,
   commentslikes,
+  theme
 }) => {
   const [readMore, setReadMore] = useState(false);
 
@@ -16,6 +17,8 @@ const Noimagepost = ({
   const [commented, setCommented] = useState(false);
   const [reposted, setReposted] = useState(false);
   const [sent, setSent] = useState(false);
+
+  const textcolor = theme ? "white" : "black";
   return (
     <View>
       {/* <PostHead /> */}
@@ -24,7 +27,7 @@ const Noimagepost = ({
         <Text
           //if readMore is true, show full text else show just two lines of the text
           numberOfLines={readMore ? undefined : 2}
-          onPress={() => setReadMore(!readMore)}
+          onPress={() => setReadMore(!readMore)} style = {{ color: textcolor }}
         >
           {content}
         </Text>
@@ -52,9 +55,9 @@ const Noimagepost = ({
               />
             </View>
             {/* <Ionicons name="thumbs-up" color={'black'} backgroundColor={'red'}/> */}
-            <Text>{likes}</Text>
+            <Text style={{color: textcolor}}>{likes}</Text>
           </View>
-          <Text>{commentslikes}</Text>
+          <Text style={{color: textcolor}}>{commentslikes}</Text>
         </View>
       </View>
 
@@ -63,7 +66,7 @@ const Noimagepost = ({
           <Ionicons
             name={liked ? "thumbs-up" : "thumbs-up-outline"}
             size={20}
-            color={liked ? "blue" : "black"}
+            color={liked ? "blue" : textcolor}
             onPress={() => setLiked(!liked)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>Like</Text>
@@ -73,7 +76,7 @@ const Noimagepost = ({
           <Ionicons
             name="chatbox-outline"
             size={20}
-            color={commented ? "blue" : "black"}
+            color={commented ? "blue" : textcolor}
             onPress={() => setCommented(!commented)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>Comment</Text>
@@ -83,7 +86,7 @@ const Noimagepost = ({
           <Ionicons
             name="sync-outline"
             size={20}
-            color={reposted ? "blue" : "black"}
+            color={reposted ? "blue" : textcolor}
             onPress={() => setReposted(!reposted)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>Repost</Text>
@@ -93,7 +96,7 @@ const Noimagepost = ({
           <Ionicons
             name={sent ? "paper-plane" : "paper-plane-outline"}
             size={20}
-            color={sent ? "blue" : "black"}
+            color={sent ? "blue" : textcolor}
             onPress={() => setSent(!sent)}
           />
           <Text style={{ color: "grey", fontSize: 10 }}>
