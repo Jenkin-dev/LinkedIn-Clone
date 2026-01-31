@@ -36,7 +36,10 @@ const Postcontent = ({
         >
           {content}
         </Text>
-        <Text style={{ color: "grey", fontWeight: 600 }}>
+        <Text
+          style={{ color: "grey", fontWeight: 600 }}
+          onPress={() => setReadMore(!readMore)}
+        >
           {readMore ? "...see less" : " ...see more"}
         </Text>
 

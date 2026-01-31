@@ -11,7 +11,7 @@ import {
 import { useState } from "react";
 import { router } from "expo-router";
 
-import { Ionicons } from "@expo/vector-icons"; //for the dropdown icon
+import { Ionicons } from "@expo/vector-icons"; 
 import { SafeAreaView } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import PostHead from "../components/posthead";

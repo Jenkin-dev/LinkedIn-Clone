@@ -6,6 +6,8 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 const PostHead = ({ Username, Details, Profilepicture, days, theme }) => {
   const [followed, setfollowed] = useState(false);
   const textcolor = theme ? "white" : "black";
+  const unfollowcolor = theme ? "aqua" : "blue";
+  const followcolor = theme ? "white" : "purple";
 
   return (
     <View
@@ -41,7 +43,9 @@ const PostHead = ({ Username, Details, Profilepicture, days, theme }) => {
       <TouchableOpacity style={{ flexDirection: "row", gap: 10 }}>
         <Text
           onPress={() => setfollowed(!followed)}
-          style={{ color: followed ? "purple" : "blue" }}
+          style={{
+            color: followed ? followcolor: unfollowcolor,
+          }}
         >
           {followed ? "✔Following" : "Follow"}
         </Text>
